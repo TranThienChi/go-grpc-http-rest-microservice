@@ -1,0 +1,13 @@
+version: '3'
+services:
+  todo-service:
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+       GRPCPort: 9090 
+       HTTPPort: 8080 
+       DatastoreDBHost: docker.for.win.localhost:3306
+       DatastoreDBUser: root 
+       DatastoreDBPassword: CHUNGchi1989 
+       DatastoreDBSchema: sql_todo
